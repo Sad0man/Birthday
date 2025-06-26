@@ -106,6 +106,10 @@ body {
   text-align: center;
   margin-bottom: 10px;
   z-index: 999;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 button {

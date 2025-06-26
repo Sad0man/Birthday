@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Tahshin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="bulbs"></div>
+    <div id="banner"></div>
+    <div id="balloon-border"></div>
+    <div id="balloons"></div>
+    <div id="cake"></div>
+    <div id="message"></div>
+  </div>
+
+  <div id="controls">
+    <button id="btn-lights" onclick="turnOnLights()">Turn On Lights</button>
+    <button id="btn-music" onclick="playMusic()" style="display:none;">Play Music</button>
+    <button id="btn-decorate" onclick="decorate()" style="display:none;">Decorate</button>
+    <button id="btn-cake" onclick="showCake()" style="display:none;">Cake ?</button>
+    <button id="btn-message" onclick="showMessage()" style="display:none;">Message</button>
+  </div>
+
+  <audio id="birthdayMusic" src="assets/music/music.mp3" preload="auto" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: white;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background 2s ease;
+}
+
+#container {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Common decoration base */
+#bulbs, #banner, #balloon-border, #balloons, #cake, #message {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Bulbs */
+#bulbs {
+  top: 10px;
+}
+#bulbs img {
+  height: 30px;
+  margin: 2px;
+  display: none;
+  animation: flicker 1s infinite;
+}
+
+/* Banner */
+#banner {
+  top: 45px;
+}
+#banner img {
+  display: none;
+  width: 180px;
+}
+
+/* Balloon Border */
+#balloon-border {
+  top: 85px;
+}
+#balloon-border img {
+  display: none;
+  width: 90%;
+}
+
+/* Balloons */
+#balloons {
+  top: 120px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+#balloons img {
+  width: 30px;
+  opacity: 0;
+  animation: rise 2s ease-in forwards;
+}
+
+/* Cake */
+#cake {
+  top: 180px;
+}
+#cake img {
+  display: none;
+  width: 60px;
+}
+
+/* Message */
+#message {
+  top: 235px;
+  width: 80%;
+  max-width: 300px;
+  background: white;
+  color: black;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes rise {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+#controls {
+  text-align: center;
+  margin-bottom: 10px;
+  z-index: 999;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #fff0f6;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+button:hover {
+  transform: scale(1.05);
+}

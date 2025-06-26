@@ -46,13 +46,13 @@ function decorate() {
   setTimeout(() => {
     const balloons = document.getElementById('balloons');
     balloons.innerHTML = '';
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 5; i++) {
       setTimeout(() => {
         const img = document.createElement('img');
         img.src = `assets/img/b${i}.png`;
         img.style.animationDelay = `${i * 0.1}s`;
         balloons.appendChild(img);
-      }, i * 300);
+      }, i * 250);
     }
   }, 2500);
 

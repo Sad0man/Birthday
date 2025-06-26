@@ -46,7 +46,7 @@ function decorate() {
   setTimeout(() => {
     const balloons = document.getElementById('balloons');
     balloons.innerHTML = '';
-    for (let i = 1; i <= 7; i++) {
+    for (let i = 1; i <= 6; i++) {
       setTimeout(() => {
         const img = document.createElement('img');
         img.src = `assets/img/b${i}.png`;
